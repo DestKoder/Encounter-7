@@ -1,5 +1,6 @@
 #include "Flat.h"
 
+using namespace destkoder;
 
 bool Flat::operator==(const Flat& flat) const {
 	return square == flat.getSquare();

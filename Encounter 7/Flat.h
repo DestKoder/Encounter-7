@@ -3,11 +3,11 @@
 #include <string>
 
 using namespace std;
-
-class Flat
-{
-	int square;
-	double price;
+namespace destkoder {
+	class Flat
+	{
+		int square;
+		double price;
 
 	public:
 		Flat(int square, double price) {
@@ -18,7 +18,7 @@ class Flat
 		int getSquare() const { return square; }
 		double getPrice() const { return price; }
 
-		friend ostream& operator<< (ostream & os, const Flat & flat) {
+		friend ostream& operator<< (ostream& os, const Flat& flat) {
 			os << "Flat{square: \"" << flat.getSquare() << "\", price: \"" << flat.getPrice() << "\"}";
 			return os;
 		}
@@ -28,5 +28,7 @@ class Flat
 		bool operator<(const Flat& flat) const;
 
 		Flat& operator=(const Flat& flat);
-};
+	};
+}
+
 

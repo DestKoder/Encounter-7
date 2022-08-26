@@ -1,5 +1,7 @@
 #include "Overcoat.h"
 
+using namespace destkoder;
+
 bool Overcoat::operator==(const Overcoat& coat) const {
 	return this->getType()._Equal(coat.getType());
 }
